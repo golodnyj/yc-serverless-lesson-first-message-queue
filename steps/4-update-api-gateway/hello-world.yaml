@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Updated API
+paths:
+  /results:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud-functions
+        function_id: <идентификатор функции>
+        service_account_id: <ID сервисного аккаунта>
+      operationId: function-for-user-requests
+  /check:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud-functions
+        function_id: <идентификатор функции>
+        service_account_id: <ID сервисного аккаунта>
+      operationId: add-url
